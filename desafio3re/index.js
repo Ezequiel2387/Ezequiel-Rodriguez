@@ -25,7 +25,12 @@ class Contenedor {
     }
 }
 
-let usuario =new Contenedor ("Productos.txt")
+let usuario =new Contenedor ("Productos.txt");
+
+
+app.get("/", (req, res) => {
+    res.status(200).send("Escriba /productos o /productoRandom");
+})
 
 app.get("/productos",(req,resp)=>{
         usuario.queande().then((res)=> {
