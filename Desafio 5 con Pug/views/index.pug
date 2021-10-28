@@ -1,0 +1,25 @@
+html 
+    head
+        title= "Desafio 5 pug"
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+        script(src="../index.js")
+    body
+        div
+            h1(style ="margin:10px 50px") Cargue un Producto
+            form(action="/productos" method="post" style ="margin:10px 50px") 
+                div(class="form-group")
+                    label(for="nombreproduct")="Titulo" 
+                    input(type="text" class="form-control nombre" name="titulo",id="exampleInputEmail1" aria-describedby="emailHelp")
+
+                div(class="form-group")
+                    label(for="nombreproduct")="Precio" 
+                    
+                    input(type="number",class="form-control precio" name="precio",id="exampleInputEmail1" aria-describedby="emailHelp")
+
+                div(class="form-group")
+                    label(for="nombreproduct" )="URL" 
+                    input(type="text",class="form-control img" name="url",id="exampleInputEmail1" aria-describedby="emailHelp")
+                button(type="submit"  class="agregar btn btn-success" ) Guardar 
+                br
+                br
+                a(href="http://localhost:8080/producto"  class="btn btn-success") Ver productos 

@@ -1,0 +1,22 @@
+html 
+    head 
+        title= "Productos"
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+    body 
+        h1= "Vista de Productos"
+        div(class="tabla")
+                table(class="table")
+                    thead
+                        tr
+                            th(scope="col") Producto
+                            th(scope="col") Precio
+                            th(scope="col") Foto 
+                    tbody 
+                       each producto in data 
+                             tr                       
+                                td=producto.titulo
+                                td=producto.precio 
+                                td
+                                    img(src= producto.url style="width:40px" alt="foto")
+                    a(href="http://localhost:8080/productos" class="btn btn-success") Cargar un nuevo Producto
+                
