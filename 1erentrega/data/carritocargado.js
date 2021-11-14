@@ -1,0 +1,2 @@
+carritocargado=[]
+module.exports=carritocargado
