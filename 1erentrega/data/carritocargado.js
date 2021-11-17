@@ -1,2 +1,0 @@
-carritocargado=[]
-module.exports=carritocargado
