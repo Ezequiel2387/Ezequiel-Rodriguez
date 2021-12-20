@@ -1,0 +1,24 @@
+[
+  {
+    "horaCarritoCreado": "2021-12-20T15:20:45.903Z",
+    "idCarrito": 1
+  },
+  {
+    "horaCarritoCreado": "2021-12-20T15:20:49.045Z",
+    "idCarrito": 2,
+    "producto": {
+      "titulo": "Dragon",
+      "descripcion": "lindo",
+      "codigo": "789",
+      "url": "https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Monster-256.png",
+      "precio": "789",
+      "stock": "4",
+      "hora": "2021-12-16T03:31:01.404Z",
+      "id": 1
+    }
+  },
+  {
+    "horaCarritoCreado": "2021-12-20T15:20:51.467Z",
+    "idCarrito": 3
+  }
+]

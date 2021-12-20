@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "Dragon",
+    "descripcion": "lindo",
+    "codigo": "789",
+    "url": "https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Monster-256.png",
+    "precio": "789",
+    "stock": "4",
+    "hora": "2021-12-16T03:31:01.404Z",
+    "id": 1
+  },
+  {
+    "titulo": "Técnico Electrónico",
+    "descripcion": "lindo",
+    "codigo": "5654",
+    "url": "url1",
+    "precio": "456",
+    "stock": "7",
+    "hora": "2021-12-16T03:31:20.556Z",
+    "id": 2
+  },
+  {
+    "titulo": "Osito hermoso",
+    "descripcion": "feo",
+    "codigo": "789",
+    "url": "https://cdn3.iconfinder.com/data/icons/animal-40/128/Animal_Bear-256.png",
+    "precio": "789",
+    "stock": "6",
+    "hora": "2021-12-16T03:31:34.749Z",
+    "id": 3
+  }
+]
