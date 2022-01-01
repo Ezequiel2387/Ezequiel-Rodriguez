@@ -1,0 +1,36 @@
+
+<div class="container p-5">
+    <p>
+  <font size="6">  <td><strong  style="color:hsl(240, 100%, 50%)">Centro de Mensajes</strong></td><br>
+  <td><strong  style="color:hsl(240, 100%, 50%)">(Compresión {{por}})</strong></td>
+  </font>
+
+    <form onsubmit="return addMsn()">
+    <input type="email" id="mailDelUsuario" placeholder="Email"><br><br>
+    <input type="text" id="nombreDelUsuario" placeholder="Nombre"><br><br>
+    <input type="text" id="apellidoDelUsuario" placeholder="Apellido"><br><br>
+    <input type="number" id="edadDelUsuario" placeholder="Edad"><br><br>
+    <input type="text" id="aliasDelUsuario" placeholder="Alias"><br><br>   
+    <input type="url" id="avatar" placeholder="Avatar"><br><br>
+    <input type="text" id="mensaje" placeholder="Mensaje"><br><br>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    <br><br>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+    </p>
+            </thead>
+                {{#each data}}
+                <tr>
+                    <font size="5">
+                    <td><strong  style="color:hsl(240, 100%, 50%)">{{this.mailDelUsuario}}</strong></td>
+                    <font style="color:#8D4925">{{this.author.fech}}</font>  
+                    <i style="color:#008000"> : {{this.mensaje}}</i>
+                   <td><img  src={{this.author.avatar}} hight="70" width="70" /></td><br>
+                   </font>
+                </tr>
+                {{/each}}
+              </tr>
+                  <div id="caja"></div>
+</div>
+

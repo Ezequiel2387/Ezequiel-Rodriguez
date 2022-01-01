@@ -1,0 +1,24 @@
+{
+  "name": "desafio5handlebars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "handlebars": "^4.5.0",
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "faker": "^5.5.3",
+    "mongoose": "^6.1.4",
+    "normalizr": "^3.6.1",
+    "socket.io": "^4.3.1"
+  }
+}
