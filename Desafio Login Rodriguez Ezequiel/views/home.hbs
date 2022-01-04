@@ -1,0 +1,94 @@
+<div class="container p-5">
+        <font size="7" action="/productos" method="POST">
+        <td><strong  style="color:hsl(120, 82%, 18%)">Bienvenido {{usuario}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+        <button onClick="window.location.href='http://localhost:8080/logout';" type="submit" class="btn btn-primary">Desloguear</button></td><br>
+        </font><br><br>
+        <h1>Cargue un producto </h1>   
+        <form action="/productos" method="POST">
+            <div class="mb-3">
+              <label for="titulo" class="form-label">Titulo</label>
+              <input 
+                type="text" 
+                name="titulo"
+                class="form-control" 
+                id="" 
+                aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="precio" class="form-label">Precio</label>
+              <input 
+                type="text" 
+                name="precio"
+                class="form-control" 
+                id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="thumbnail" class="form-label">URL</label>
+                <input 
+                type="text" 
+                name="url"
+                class="form-control" 
+                id="exampleInputPassword1"> 
+              </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </form>
+    </div>
+    <hr>
+        <div class="container p-5 ">
+        <h1>Vista de Productos</h1>
+        <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+              </tr>
+            </thead>
+                {{#each datos}}
+                <tr>
+                    <td>{{this.titulo}}</td>
+                    <td>{{this.precio}}</td>
+                    <td><img  src={{this.url}} hight="70" width="70" /></td>
+                </tr>
+                {{/each}}
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <hr>
+<div class="container p-5">
+    <p>
+  <font size="6">  <td><strong  style="color:hsl(240, 100%, 50%)">Centro de Mensajes</strong></td><br>
+  <td><strong  style="color:hsl(240, 100%, 50%)">(Compresión {{por}})</strong></td>
+  </font>
+
+    <form onsubmit="return addMsn()">
+    <input type="email" id="mailDelUsuario" placeholder="Email"><br><br>
+    <input type="text" id="nombreDelUsuario" placeholder="Nombre"><br><br>
+    <input type="text" id="apellidoDelUsuario" placeholder="Apellido"><br><br>
+    <input type="number" id="edadDelUsuario" placeholder="Edad"><br><br>
+    <input type="text" id="aliasDelUsuario" placeholder="Alias"><br><br>   
+    <input type="url" id="avatar" placeholder="Avatar"><br><br>
+    <input type="text" id="mensaje" placeholder="Mensaje"><br><br>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    <br><br>
+    </form> 
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+    </p>
+            </thead>
+                {{#each data}}
+                <tr>
+                    <font size="5">
+                    <td><strong  style="color:hsl(240, 100%, 50%)">{{this.mailDelUsuario}}</strong></td>
+                    <font style="color:#8D4925">{{this.author.fech}}</font>  
+                    <i style="color:#008000"> : {{this.mensaje}}</i>
+                   <td><img  src={{this.author.avatar}} hight="70" width="70" /></td><br>
+                   </font>
+                </tr>
+                {{/each}}
+              </tr>
+                  <div id="caja"></div>
+</div>
+
