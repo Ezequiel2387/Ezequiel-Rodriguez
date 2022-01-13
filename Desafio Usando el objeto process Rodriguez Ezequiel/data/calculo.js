@@ -1,0 +1,3 @@
+queryDelFork=[]
+
+module.exports=queryDelFork
